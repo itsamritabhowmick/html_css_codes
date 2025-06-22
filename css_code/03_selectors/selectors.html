@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Selectors Element</title>
+    <style>
+      /* .................Universal Selector................... */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* .................Type Selector................... */
+      p {
+        font-size: 16px;
+        /* margin: 10px 20px 10px 20px;
+        padding: 1px 2px 3px 4px; */
+        margin-bottom: 10px;
+      }
+
+      /* .................class Selector................... */
+      .highlight {
+        background-color: #333;
+      }
+
+      /* .................id Selector................... */
+      #header {
+        background-color: #860303;
+      }
+
+      /* .................Attribute Selector................... */
+      input[type="text"] {
+        border: 1px solid #21a2c9;
+      }
+
+      /* .................Decendent Selector................... */
+      article p {
+        /* all the p which are descendent to article */
+        font-style: italic;
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 10px;
+      }
+
+      /* .................child Selector................... */
+      ul > li {
+        list-style-type: square;
+        background-color: orange;
+      }
+
+      div > p {
+        background-color: #880404;
+      }
+
+      /* .................Adjacent Sibling Selector................... */
+      h1 + p {
+        font-weight: bold;
+      }
+
+      /* .................General Sibling Selector................... */
+      h2 ~ p {
+        color: #860303;
+      }
+
+      /* .................Pseudo-class Selector................... */
+      a:hover {
+        background-color: #14a50e;
+        text-decoration: none;
+        color: #1a1a1a;
+        padding: 5px;
+        margin: 4px;
+      }
+
+      /* .................Pseudo-element Selector................... */
+      p::first-letter {
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      /* .................Grouping Selector................... */
+      h1,
+      h2,
+      h3 {
+        color: orange;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <header id="header">This is the header</header>
+
+    <h1>Main Heading</h1>
+    <p>
+      This paragraph is adjacent to h1 and demonstrates the adjacent sibling
+      selector.
+    </p>
+
+    <p>This is a regular paragraph showing the type selector.</p>
+
+    <p class="highlight">
+      This paragraph is adjacent to h1 and demonstrates the adjacent sibling
+      selector.
+    </p>
+
+    <input type="text" placeholder="Enter text here" />
+
+    <article>
+      <p>
+        This paragraph is inside an article, showing the descendent selector.
+      </p>
+      <p>
+        This paragraph is inside an article, showing the descendent selector.
+      </p>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+          inventore!
+        </p>
+      </div>
+    </article>
+
+    <ul>
+      <li>Direct child list item</li>
+      <li>
+        Another direct child
+        <ul>
+          <li>This is not a direct child of the first ul</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div>
+      <p>I am a child</p>
+      <p>I am a child</p>
+      <section>
+        <p>I am a Descendant</p>
+      </section>
+    </div>
+
+    <h2>Sub Heading</h2>
+    <p>
+      This is a sibling paragraph to h2, demonstrating the general sibling
+      selector.
+    </p>
+
+    <div>This is a sibling paragraph to h2.</div>
+    <p>This is another sibling paragraph to h2.</p>
+
+    <a href="#">Hover over me to see the pseudo-class selector in action</a>
+
+    <p>
+      This paragraph demonstrates pseudo-element selectors with a styled first
+      line and first lettter.
+    </p>
+
+    <h3>Heading 3</h3>
+    <p>
+      The headings h1, h2, and h3 use the grouping selector for the consistent
+      font family.
+    </p>
+  </body>
+</html>
